@@ -1,0 +1,146 @@
+export const categories = ["All", "Music", "Technology", "Sports", "Arts", "Business", "Food"];
+
+export const events = [
+  {
+    id: 1,
+    title: "TechConf 2026",
+    category: "Technology",
+    date: "2026-12-05",
+    time: "09:00 AM",
+    location: "Beirut Digital District, Beirut",
+    price: 49,
+    seats: 300,
+    registered: 187,
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+    description:
+      "Join 300+ tech professionals for a full day of talks, workshops, and networking. Covering AI, Web3, and modern frontend development. Industry leaders share insights you won't find anywhere else.",
+    organizer: "BDD Events",
+    tags: ["AI", "Web3", "Frontend", "Networking"],
+  },
+  {
+    id: 2,
+    title: "Night Jazz Festival",
+    category: "Music",
+    date: "2026-12-12",
+    time: "07:00 PM",
+    location: "Zaitunay Bay, Beirut",
+    price: 35,
+    seats: 500,
+    registered: 412,
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
+    description:
+      "An unforgettable night under the stars featuring Lebanon's finest jazz musicians alongside international acts. Food stalls, art installations, and incredible vibes by the waterfront.",
+    organizer: "Beirut Music Collective",
+    tags: ["Jazz", "Live Music", "Outdoor", "Waterfront"],
+  },
+  {
+    id: 3,
+    title: "Startup Weekend Beirut",
+    category: "Business",
+    date: "2026-12-19",
+    time: "08:00 AM",
+    location: "Campus Martyr Square, Beirut",
+    price: 25,
+    seats: 120,
+    registered: 98,
+    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80",
+    description:
+      "54 hours to build, launch, and pitch a startup. Teams form on Friday night and present to investors Sunday. Mentors from top regional accelerators will guide you through the process.",
+    organizer: "Techstars Beirut",
+    tags: ["Startup", "Pitching", "Hackathon", "Investors"],
+  },
+  {
+    id: 4,
+    title: "Modern Art Exhibition",
+    category: "Arts",
+    date: "2026-12-20",
+    time: "10:00 AM",
+    location: "Sursock Museum, Beirut",
+    price: 15,
+    seats: 200,
+    registered: 54,
+    image: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=800&q=80",
+    description:
+      "Explore 40+ works from emerging Lebanese and Arab artists. The exhibition blends traditional techniques with digital media, challenging perceptions of identity, displacement, and belonging.",
+    organizer: "Sursock Museum",
+    tags: ["Art", "Exhibition", "Lebanese Artists", "Culture"],
+  },
+  {
+    id: 5,
+    title: "City Half Marathon",
+    category: "Sports",
+    date: "2027-01-10",
+    time: "06:30 AM",
+    location: "Corniche, Beirut",
+    price: 20,
+    seats: 1000,
+    registered: 743,
+    image: "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=800&q=80",
+    description:
+      "Run 21km along Beirut's iconic Corniche. All fitness levels welcome. Chip timing, medals for finishers, hydration stations every 3km, and a post-race celebration party.",
+    organizer: "Beirut Marathon Association",
+    tags: ["Running", "Marathon", "Fitness", "Outdoor"],
+  },
+  {
+    id: 6,
+    title: "Lebanese Food Festival",
+    category: "Food",
+    date: "2027-01-15",
+    time: "12:00 PM",
+    location: "Hippodrome, Beirut",
+    price: 10,
+    seats: 2000,
+    registered: 1120,
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80",
+    description:
+      "Celebrate Lebanese cuisine with 50+ restaurants and home chefs. Live cooking demos, mezze competitions, traditional dabke performances, and artisan food stalls from across the country.",
+    organizer: "Taste Lebanon",
+    tags: ["Food", "Culture", "Lebanese Cuisine", "Festival"],
+  },
+  {
+    id: 7,
+    title: "React & Node.js Bootcamp",
+    category: "Technology",
+    date: "2027-01-22",
+    time: "09:00 AM",
+    location: "Online (Zoom)",
+    price: 0,
+    seats: 150,
+    registered: 89,
+    image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&q=80",
+    description:
+      "A free intensive 2-day bootcamp covering React 18, Node.js, REST APIs, and deployment. Perfect for students and junior devs looking to level up. Certificate of completion provided.",
+    organizer: "DevAcademy Lebanon",
+    tags: ["React", "Node.js", "Free", "Certificate"],
+  },
+  {
+    id: 8,
+    title: "Electronic Music Night",
+    category: "Music",
+    date: "2027-01-30",
+    time: "09:00 PM",
+    location: "The Grand Factory, Beirut",
+    price: 30,
+    seats: 400,
+    registered: 310,
+    image: "https://images.unsplash.com/photo-1571266028243-d220c6a6fce7?w=800&q=80",
+    description:
+      "Three floors of electronic music featuring local and international DJs. Techno, house, and ambient rooms ensure there's something for every electronic music lover.",
+    organizer: "Grand Factory Events",
+    tags: ["Electronic", "DJ", "Nightlife", "Dance"],
+  },
+];
+
+export const getEventById = (id) => events.find((e) => e.id === parseInt(id));
+
+export const getCategoryColor = (category) => {
+  const colors = {
+    Technology: "bg-blue-500/20 text-blue-400 border border-blue-500/30",
+    Music: "bg-pink-500/20 text-pink-400 border border-pink-500/30",
+    Business: "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30",
+    Arts: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
+    Sports: "bg-green-500/20 text-green-400 border border-green-500/30",
+    Food: "bg-orange-500/20 text-orange-400 border border-orange-500/30",
+  };
+  return colors[category] || "bg-gray-500/20 text-gray-400";
+};

@@ -68,7 +68,7 @@ const CreateEvent = () => {
 
     setSubmitting(true);
     setTimeout(() => {
-      const newEvent = addUserEvent({
+      addUserEvent({
         ...form,
         price: parseFloat(form.price) || 0,
         seats: parseInt(form.seats),

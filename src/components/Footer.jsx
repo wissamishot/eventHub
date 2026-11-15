@@ -24,7 +24,7 @@ const Footer = () => {
               {[FiGithub, FiTwitter, FiInstagram, FiMail].map((Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href="!#"
                   className="w-9 h-9 rounded-lg bg-gray-800 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-gray-700 transition-colors"
                 >
                   <Icon />

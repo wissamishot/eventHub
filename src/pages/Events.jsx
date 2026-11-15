@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { FiSearch, FiFilter, FiGrid, FiList } from "react-icons/fi";
+import { FiSearch, FiGrid, FiList } from "react-icons/fi";
 import EventCard from "../components/EventCard";
 import { events, categories } from "../data/events";
 import { useApp } from "../context/AppContext";
